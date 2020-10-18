@@ -4,16 +4,29 @@
   </h1>
   <nav class='pc-nav'>
     <ul>
-      <li>
-        <%= link_to new_user_registration_path do %>
-          <i class="glyphicon glyphicon-new-window" aria-hidden="true">新規登録</i>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to new_user_session_path do %>
-          <i class="glyphicon glyphicon-log-in" aria-hidden="true">ログイン</i>
-        <% end %>
-      </li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to notes_path do %>
+            <i class="glyphicon glyphicon-list-alt" aria-hidden="true">メモ一覧</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_note_path do %>
+            <i class="glyphicon glyphicon-list-alt" aria-hidden="true">メモ登録</i>
+          <% end %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to new_user_registration_path do %>
+            <i class="glyphicon glyphicon-new-window" aria-hidden="true">新規登録</i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <i class="glyphicon glyphicon-log-in" aria-hidden="true">ログイン</i>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </nav>
 </header>
