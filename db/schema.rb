@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_17_130107) do
 
   create_table "notes", force: :cascade do |t|
-    t.integer "name"
+    t.text "title"
     t.integer "user_id"
     t.integer "category_id"
     t.text "explanation"

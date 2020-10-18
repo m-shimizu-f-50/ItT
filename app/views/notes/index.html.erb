@@ -1,0 +1,24 @@
+ <div class='container'>
+   <div class='row'>
+    <h2>メモ一覧</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>メモID</th>
+          <th>タイトル</th>
+          <th>カテゴリー</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @notes.each do |note| %>
+        <tr>
+          <td><%= note.id %></td>
+          <td><%= note.title %></td>
+          <td>カテゴリー名</td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+   </div>
+ </div>
+
