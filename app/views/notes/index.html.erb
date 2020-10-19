@@ -13,7 +13,11 @@
         <% @notes.each do |note| %>
         <tr>
           <td><%= note.id %></td>
-          <td><%= note.title %></td>
+          <td>
+            <%= link_to note_path(note) do %>
+              <%= note.title %>
+            <% end %>
+          </td>
           <td>カテゴリー名</td>
         </tr>
         <% end %>
