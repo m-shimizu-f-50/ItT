@@ -4,6 +4,7 @@
   <%= f.text_field :title %>
 
   <h4>カテゴリー</h4>
+  <%= f.collection_select :category_id, Category.all, :id, :name %>
 
   <h4>内容</h4>
   <%= f.text_area :explanation %>

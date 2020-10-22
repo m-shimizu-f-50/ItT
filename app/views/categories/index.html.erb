@@ -29,7 +29,7 @@
           <tr>
             <td><%= category.name %></td>
             <td><%= category.is_valid %></td>
-            <td><%= link_to '編集する' %></td>
+            <td><%= link_to '編集する',edit_category_path(category.id) %></td>
           </tr>
           <% end %>
         </tbody>

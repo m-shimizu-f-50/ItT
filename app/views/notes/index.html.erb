@@ -11,7 +11,6 @@
       </thead>
       <tbody>
         <% @notes.each do |note| %>
-        
         <tr>
           <td><%= note.id %></td>
           <td>
@@ -19,7 +18,7 @@
               <%= note.title %>
             <% end %>
           </td>
-          <td>カテゴリー名</td>
+          <td><%= note.category.name %></td>
         </tr>
         <% end %>
       </tbody>

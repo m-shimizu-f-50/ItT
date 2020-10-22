@@ -1,6 +1,6 @@
 <div class='stretch-text'>
   <h2>タイトル：<%= @note.title %></h2>
-  <h2>カテゴリ：</h2>
+  <h2>カテゴリ：<%= @note.category.name %></h2>
   <h2>説明：<%= @note.explanation %></h2>
   <%= link_to "編集する", edit_note_path(@note) %>
   <%= link_to "削除", note_path(@note), method: :delete %>
