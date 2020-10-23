@@ -4,15 +4,15 @@
     <table class='table'>
       <thead>
         <tr>
-          <th>メモID</th>
           <th>タイトル</th>
           <th>カテゴリー</th>
         </tr>
       </thead>
       <tbody>
+
         <% @notes.each do |note| %>
+        <% if user_signed_in? && current_user.id == note.user_id %>
         <tr>
-          <td><%= note.id %></td>
           <td>
             <%= link_to note_path(note) do %>
               <%= note.title %>
@@ -20,6 +20,7 @@
           </td>
           <td><%= note.category.name %></td>
         </tr>
+        <% end %>
         <% end %>
       </tbody>
     </table>
