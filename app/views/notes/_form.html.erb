@@ -1,0 +1,33 @@
+<%= form_with model:note, local: true do |f| %>
+  <div class='form-group'>
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, class: 'form-control', id: 'note_title' %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :カテゴリー %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  <div class='form-group'>
+    <div id='editor'>
+      <%= f.label :内容 %>
+      <%= f.text_area :explanation, rows: 5, class: 'form-control', id: 'note_explanation', "v-model" => "input", name: "note[explanation]" %>
+    <div v-html='input | marked'></div>
+  </div>
+  <%= f.submit '登録', class: 'btn btn-success' %>
+  </div>
+  <% end %>
+
+  <!-- リアルタイムプレビュー -->
+  <script type="text/javascript">
+    window.onload = function() {
+      new Vue({
+      el: '#editor',
+      data: {
+        input: '<%== j @note.explanation %>',
+      },
+      filters: {
+      marked: marked,
+      },
+      });
+    };
+  </script>
