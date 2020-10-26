@@ -64,3 +64,4 @@ gem 'devise'
 gem 'pry-byebug', group: :development
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
+gem 'ransack'
