@@ -1,0 +1,10 @@
+<div id='category-search'>
+  <h2>カテゴリ検索</h2>
+   <div class="list-group">
+    <% @categorys.each do |category| %>
+      <div class="list-group-item">
+        <%= link_to category.name, categorys_search_path(category),data: {"turbolinks" => false} %>
+      </div>
+    <% end %>
+  </div>
+</div>

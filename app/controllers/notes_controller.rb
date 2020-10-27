@@ -12,7 +12,8 @@ class NotesController < ApplicationController
   end
 
   def index
-    
+    # is_validがマッチするレコードを全て取得
+    @categorys = Category.where(is_valid: true)
     @q = Note.all.ransack(params[:q])
     @notes = @q.result(distinct: true)
   end
@@ -35,6 +36,15 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @note.destroy
     redirect_to notes_path
+  end
+
+  def search
+    @categorys = Category.where(is_valid: true)
+    @category = Category.find(params[:id])
+    @q = @category.notes.all.ransack(params[:q])
+    @notes = @q.result(distinct: true).page(params[:page])
+    @title = @category.name
+    render 'notes/index'
   end
 
   private
