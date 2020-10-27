@@ -27,6 +27,15 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def search
+    @categorys = Category.where(is_valid: true)
+    @category = Category.find(params[:id])
+    @q = @category.notes.all.ransack(params[:q])
+    @notes = @q.result(distinct: true)
+    @title = @category.name
+    render 'notes/index'
+  end
+
 
   private
 
