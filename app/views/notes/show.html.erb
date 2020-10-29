@@ -1,21 +1,29 @@
-<div class='stretch-text'>
-  <h2>タイトル：<%= @note.title %></h2>
-  <h2>カテゴリ：<%= @note.category.name %></h2>
-  <div id="star-rate-<%= @note.id %>"></div>
-    <script>
-      // 繰り返し処理でもidをidを一意にできるようにstretch_idを入れる
-    $('#star-rate-<%= @note.id %>').raty({
-      size: 36,
-      starOff:  '<%= asset_path('star-off.png') %>',
-      starOn : '<%= asset_path('star-on.png') %>',
-      starHalf: '<%= asset_path('star-half.png') %>',
-      half: true,
-      // 読み込みだけで入力できない
-      readOnly: true,
-      score: <%= @note.rate %>,
-    });
-    </script>
-  <h2>説明：<%= markdown(@note.explanation) %></h2>
-  <%= link_to "編集する", edit_note_path(@note),data: {"turbolinks" => false} %>
-  <%= link_to "削除", note_path(@note), method: :delete %>
+<div class='container'>
+   <div class='row'>
+    <h1>メモ詳細</h1>
+    <div class='stretch-text'>
+      <h3>タイトル：<span><%= @note.title %></span></h3>
+      <h3>カテゴリ：<span><%= @note.category.name %></span></h3>
+      <h3>重要性：<span id="star-rate-<%= @note.id %>"></span></h3>
+        <script>
+          // 繰り返し処理でもidをidを一意にできるようにstretch_idを入れる
+        $('#star-rate-<%= @note.id %>').raty({
+          size: 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          half: true,
+          // 読み込みだけで入力できない
+          readOnly: true,
+          score: <%= @note.rate %>,
+        });
+        </script>
+      <h3>説明</h3>
+      <div class='explanation-area'>
+        <p><%= markdown(@note.explanation) %></p>
+      </div>
+      <%= link_to "編集する", edit_note_path(@note),data: {"turbolinks" => false} %>
+      <%= link_to "削除", note_path(@note), method: :delete %>
+    </div>
+  </div>
 </div>
