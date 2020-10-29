@@ -16,7 +16,7 @@
       <%= f.label :内容 %>
       <%= f.text_area :explanation, rows: 10, class: 'form-control', id: 'note_explanation', "v-model" => "input", name: "note[explanation]" %>
     <h2><i class="fas fa-eye"></i> Preview</h2>
-    <div id="preview-field" v-html='input | marked'>
+    <div class="explanation-area" id="preview-field" v-html='input | marked'>
     </div>
     <div ></div>
   </div>

@@ -26,6 +26,7 @@ body {
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   font-family: 'NotoSansJP-Light';
   font-size: 1.6rem;
+  background-color: #f2f2f2;
 }
 
 header {
@@ -36,9 +37,14 @@ header {
   align-items: center
 }
 
-h1 {
-   margin: 0; padding: 0;
-   font-size: 20px;
+h1{
+  font-size:32px;
+  font-weight: 600;
+}
+
+h3{
+  font-size:24px;
+  font-weight: 600;
 }
 
 a {
@@ -73,4 +79,8 @@ footer{
   p {
     margin: 0;
   }
+}
+
+span{
+  margin-left: 50px;
 }
