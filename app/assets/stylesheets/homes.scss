@@ -2,3 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container-image {
+  margin: auto;
+  height: 900px;
+  max-width: 100%;
+  background-image: image-url("mainimg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align:center;
+  }
+
+.section-title{
+  padding-top:250px;
+  padding-bottom:30px;
+  color:#fff;
+}
+
+.feature{
+  color:#fff;
+}
+
+.title{
+  margin-bottom: 30px;
+}
