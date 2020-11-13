@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+  before_action :set_category, only: [:edit, :update, :search]
+
+
   def index
     @categorys = Category.all
     @category = Category.new
@@ -15,11 +18,9 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
     if @category.update(category_params)
       redirect_to categories_path
     else
@@ -29,7 +30,6 @@ class CategoriesController < ApplicationController
 
   def search
     @categorys = Category.where(is_valid: true)
-    @category = Category.find(params[:id])
     @q = @category.notes.all.ransack(params[:q])
     @notes = @q.result(distinct: true)
     @title = @category.name
@@ -41,5 +41,9 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name, :is_valid)
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 end
