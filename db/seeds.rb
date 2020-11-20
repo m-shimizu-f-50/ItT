@@ -6,12 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(
-   email: 'user@test.com',
-   password: 'testtest',
-   name: "test",
-
-)
 
 Category.create!(
    name: 'IT',
@@ -23,7 +17,7 @@ Note.create!(
     {
       # 1
        title: "OS",
-       user_id: 1,
+       user_id:  1,
        category_id: 1,
        explanation:
         "OSとはOperation System（オペレーティング・システム）の略で、アプリやデバイスを動作させるための基本となるソフトウェアのことです。 具体的には、キーボードやマウス・タッチパッドなどのデバイスから入力した情報をアプリケーションに伝え、また`ソフトウェアとハードウェアの連携を司る中枢的な役割`を果たします。 パソコンやスマートフォンにはゲームやワープロ・表計算などさまざまな仕事をするアプリケーションがありますが、それらはOSごとに開発されるのが通常です。\r\n\r\n\r\n```\r\n例）\r\n・Mac OS\r\n・Window OS\r\n・Linux\r\n```\r\n\r\n### OSを確認する方法\r\n画面の左上にある Apple メニュー  から「この Mac について」を選択します。 macOS の名前 (macOS Mojave など) に続いてバージョン番号が表示されます。 ビルド番号も調べる必要がある場合は、バージョン番号をクリックすると、ビルド番号が表示されます。\r\n\r\n```\r\n・バージョン\r\n・プロセッサ\r\n・メモリ\r\n・起動ディスク\r\n・グラフィックス\r\n・シアトル番号\r\n```",
@@ -68,7 +62,7 @@ Note.create!(
     {
       # 6
       title: "サーバーとクライアント",
-       user_id: 1,
+       user_id:   1,
        category_id: 1,
        explanation:
         "`ネットワーク上でデータを提供している側をサーバー`、`データを利用している側をクライアントと呼びます`。私たちが普段Webサイトを見たりメールを送ったりする際には、ク
