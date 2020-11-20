@@ -20,6 +20,22 @@
   box-sizing: border-box;
 }
 
+.alert {
+    padding: 15px;
+    margin:auto;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(88 234 46 / 20%);
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
 body {
   position: relative;
   padding-bottom: 60px;/*←footerの高さ*/
@@ -85,3 +101,5 @@ footer{
 span{
   margin-left: 50px;
 }
+
+
