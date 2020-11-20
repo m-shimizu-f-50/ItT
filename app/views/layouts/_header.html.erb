@@ -25,6 +25,9 @@
         </li>
       <% else %>
         <li>
+          <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
+        </li>
+        <li>
           <%= link_to new_user_registration_path do %>
             <i class="glyphicon glyphicon-new-window" aria-hidden="true">新規登録</i>
           <% end %>
