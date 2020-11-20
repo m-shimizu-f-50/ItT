@@ -66,4 +66,6 @@ gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
 gem 'ransack'
 gem 'jquery-rails'
+gem 'rails-i18n', '~> 5.1'
+gem 'devise-i18n'
 
