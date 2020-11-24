@@ -115,7 +115,17 @@ Note.create!(
       explanation:
       "インターネット上のウェブ ページの情報を画面上に表示するための閲覧ソフト。また一般に、コンピュータのデータやプログラムを、画面上に文字や画像として表示するためのプログラムも言う。\r\n\r\n\r\n例）Google Chrome、Safari、Firefoxなど\r\n",
       rate: 3,
+    },
+    {
+      title: "ドメイン",
+      user_id: 1,
+      category_id: 1,
+      explanation:
+      "ドメインとは「インターネット上の住所」のことで、Webサイトがどこにあるかを判別する情報として利用します。\r\n\r\n詳しく説明すると、Webサイトがどこにあるのかを判別する情報は、ドメインに紐づく「IPアドレス」というものにあります。\r\nIPアドレスは「000.00.00.00」のような数字で構成される文字列ですが、\r\n数字だけでは覚えづらいため、ドメイン名に変換してWebサイトの場所を示します。\r\n\r\n\r\n### ドメインの役割\r\nドメインはWebサイトのURLや、メールアドレスの中で使われています。\r\n\r\n例えば、\r\n\r\nWebサイトのURLでは「https://muumuu-domain.com」の「muumuu-domain.com」部分がドメインです。\r\n\r\nこれに対して、メールアドレスでは「mail@muumuu-domain.com」の「muumuu-domain.com」部分が該当します。\r\n",
+      rate: 2,
     }
+
+
 
 
   ]
