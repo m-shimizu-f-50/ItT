@@ -15,6 +15,10 @@
         <h2><%= @title %>一覧</h2>
       　<p>(全<%= @notes.count %>件)</p>
         <%= render 'notes/notes_index', notes: @notes %>
+
+      </div>
+      <div class='child-center'>
+        <%= paginate @notes %>
       </div>
    </div>
 </div>

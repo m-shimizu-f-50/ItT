@@ -15,7 +15,7 @@ class NotesController < ApplicationController
     # is_validがマッチするレコードを全て取得
     @categorys = Category.where(is_valid: true)
     @q = Note.all.ransack(params[:q])
-    @notes = @q.result(distinct: true)
+    @notes = @q.result(distinct: true).page(params[:page]).per(10)
   end
 
   def show
