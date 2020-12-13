@@ -174,7 +174,7 @@ Note.create!(
       user_id: 1,
       category_id: 1,
       explanation:
-      "ソフトウェア作者の著作権を守ったままソースコードを無償公開することを意味するライセンス形態、またはそのライセンス形態によって提供されるソフトウェアのこと。主に、\r\n再頒布ができること\r\n\r\n・ソースコードの入手が可能\r\n\r\n・それをもとに派生物を作成可能\r\n\r\n・再配布において追加ライセンスを必要としないこと\r\n\r\n\r\nなどの特徴がある。\r\n以下は代表的な`OSS`とその用途である。\r\n```\r\n・DBMS…MySQL，SQLite，PostgreSQLなど\r\n・OS…Linux，Solarisなど\r\n・Webサーバソフトウェア…Apache，nginxなど\r\n・Webブラウザ…Firefox，Webkitベースのブラウザなど\r\n・オフィス系…LibreOffice，OpenOfficeなど\r\n・画像編集…GIMPなど\r\n```",
+      "ソフトウェア作者の著作権を守ったままソースコードを無償公開することを意味するライセンス形態、またはそのライセンス形態によって提供されるソフトウェアのこと。主に、\r\n再頒布ができること\r\n\r\n・ソースコードの入手が可能\r\n\r\n・それをもとに派生物を作成可能\r\n\r\n・再配布において追加ライセンスを必要としないこと\r\n\r\n\r\nなどの特徴がある。\r\n以下は代表的な`OSS`とその用途である。\r\n\r\n```\r\n・DBMS…MySQL，SQLite，PostgreSQLなど\r\n・OS…Linux，Solarisなど\r\n・Webサーバソフトウェア…Apache，nginxなど\r\n・Webブラウザ…Firefox，Webkitベースのブラウザなど\r\n・オフィス系…LibreOffice，OpenOfficeなど\r\n・画像編集…GIMPなど\r\n```",
       rate: 3,
     },
     {
