@@ -366,6 +366,13 @@ Note.create!(
       explanation: "ユーザー専用のプライベートなクラウド環境を提供するサービス\r\n\r\nVPCの中にEC2やRDSを入れる。\r\n",
       rate: 3,
 
+    },
+    {
+       title: "AmazonEC2（仮想サーバー）",
+       user_id: 1,
+       category_id: 3,
+       explanation: "Webサーバーを構築する\r\n\r\nインターネットから接続するためパブリックサブネットの中に設置する",
+       rate: 3,
     }
 
 
