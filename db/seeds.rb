@@ -373,6 +373,13 @@ Note.create!(
        category_id: 3,
        explanation: "Webサーバーを構築する\r\n\r\nインターネットから接続するためパブリックサブネットの中に設置する",
        rate: 3,
+    },
+    {
+      title: "Amazon RDS（リレーショナルデータベース）",
+      user_id: 1,
+      category_id: 3,
+      explanation: "データベースの運用と管理を行ってくれるサービス\r\n\r\nプライベートサブネットにDBサーバーを構築する",
+      rate: 3,
     }
 
 
